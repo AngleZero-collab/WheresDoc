@@ -1,11 +1,6 @@
 import React from 'react';
-import { Github } from 'lucide-react';
 
-interface FooterProps {
-  onOpenGithubGuide: () => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onOpenGithubGuide }) => {
+export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-[#174e45]/10 bg-white py-14 text-sm text-[#5a756f]">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -27,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGithubGuide }) => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-8 text-sm font-bold text-[#102420]">
+          <div className="flex flex-wrap gap-10 text-sm font-bold text-[#102420]">
             <div className="flex flex-col gap-2.5">
               <span className="text-xs font-black uppercase tracking-[0.16em] text-[#174e45]">
                 網站導覽
@@ -48,23 +43,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGithubGuide }) => {
 
             <div className="flex flex-col gap-2.5">
               <span className="text-xs font-black uppercase tracking-[0.16em] text-[#174e45]">
-                GitHub 架設
+                服務與支援
               </span>
-              <button
-                type="button"
-                onClick={onOpenGithubGuide}
-                className="flex items-center gap-1.5 text-left text-[#5a756f] transition hover:text-[#174e45]"
-              >
-                <Github className="size-4" />
-                <span>GitHub Pages 部署說明</span>
-              </button>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#5a756f] transition hover:text-[#174e45]"
-              >
-                前往 GitHub
+              <a href="#service" className="text-[#5a756f] transition hover:text-[#174e45]">
+                交付項目
+              </a>
+              <a href="#faq" className="text-[#5a756f] transition hover:text-[#174e45]">
+                常見問題
+              </a>
+              <a href="#order" className="text-[#5a756f] transition hover:text-[#174e45]">
+                立即預約諮詢
               </a>
             </div>
           </div>
@@ -72,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenGithubGuide }) => {
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-[#174e45]/10 pt-6 text-xs text-[#5a756f]/80 sm:flex-row">
           <p>© {new Date().getFullYear()} WheresDoc. All rights reserved.</p>
-          <p className="mt-2 sm:mt-0">已配置支援 GitHub Pages 靜態網站架設與自訂網域 (CNAME)</p>
+          <p className="mt-2 sm:mt-0">專業醫師個人官方入口建置服務</p>
         </div>
       </div>
     </footer>

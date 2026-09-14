@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { Github, Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-interface NavbarProps {
-  onOpenGithubGuide: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ onOpenGithubGuide }) => {
+export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -33,17 +29,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGithubGuide }) => {
 
         {/* Actions */}
         <div className="flex items-center gap-2.5">
-          {/* GitHub Deployment Helper Button */}
-          <button
-            type="button"
-            onClick={onOpenGithubGuide}
-            className="hidden items-center gap-1.5 rounded-full border border-[#174e45]/20 bg-white/80 px-3.5 py-2 text-xs font-bold text-[#174e45] shadow-xs transition hover:bg-[#d6eae2] sm:inline-flex"
-            title="查看如何用 GitHub 架設與自訂網址"
-          >
-            <Github className="size-3.5 text-[#174e45]" />
-            <span>GitHub 架設指引</span>
-          </button>
-
           <a
             href="#order"
             className="inline-flex h-10 items-center justify-center rounded-full bg-[#174e45] px-5 text-sm font-bold text-[#f8fbf9] shadow-sm transition hover:bg-[#123e37] active:translate-y-px"
@@ -96,20 +81,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenGithubGuide }) => {
               方案價格
             </a>
             <hr className="border-[#174e45]/10" />
-            <button
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenGithubGuide();
-              }}
-              className="flex items-center justify-between rounded-xl bg-[#d6eae2]/60 p-3 text-sm font-bold text-[#174e45]"
+            <a
+              href="#order"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center rounded-xl bg-[#174e45] p-3 text-sm font-bold text-white shadow-sm"
             >
-              <span className="flex items-center gap-2">
-                <Github className="size-4" />
-                <span>GitHub 架設與網址設定</span>
-              </span>
-              <ArrowRight className="size-4" />
-            </button>
+              立即申請建置建議
+            </a>
           </div>
         </div>
       )}
