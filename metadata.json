@@ -1,6 +1,6 @@
 {
   "name": "WheresDoc 醫師跨院所官方入口",
-  "description": "為跨院所執業醫師打造唯一官方入口：整合門診時間、臨時異動、掛號、電話與地圖。支援以 GitHub 架設與部署。",
+  "description": "為跨院所執業醫師打造唯一官方入口：整合門診時間、臨時異動、掛號、電話與地圖。方案 NT$29,800 起。",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
