@@ -1,4 +1,5 @@
 import React from 'react';
+import { WheresDocLogo } from './WheresDocLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -6,17 +7,7 @@ export const Footer: React.FC = () => {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <div className="max-w-md">
-            <div className="flex items-center gap-3">
-              <span className="grid size-9 place-items-center rounded-xl bg-[#174e45] text-base font-black text-[#f8fbf9]">
-                W
-              </span>
-              <div>
-                <span className="text-base font-black text-[#102420]">WheresDoc</span>
-                <p className="text-[11px] font-semibold text-[#5a756f]">
-                  One doctor, one verified link.
-                </p>
-              </div>
-            </div>
+            <WheresDocLogo size={40} withText />
             <p className="mt-4 text-xs leading-6 text-[#5a756f]">
               為跨院所執業醫師打造唯一官方入口。免責聲明：本服務僅提供醫師公開門診資訊整理與官方掛號連結導流，不提供醫療診斷、不代收病歷資料、不經手掛號費，亦非醫療機構。
             </p>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { WheresDocLogo } from './WheresDocLogo';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -7,16 +8,8 @@ export const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#174e45]/10 bg-[#f6f8f6]/90 backdrop-blur-md">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10" aria-label="Main navigation">
-        <a href="#top" className="flex items-center gap-3 transition hover:opacity-90" aria-label="WheresDoc 首頁">
-          <span className="grid size-10 place-items-center rounded-[14px] bg-[#174e45] text-lg font-black text-[#f8fbf9] shadow-sm">
-            W
-          </span>
-          <span>
-            <span className="block text-base font-black tracking-tight text-[#102420]">WheresDoc</span>
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-[#5a756f]">
-              One doctor, one verified link
-            </span>
-          </span>
+        <a href="#top" className="transition hover:opacity-90" aria-label="WheresDoc 首頁">
+          <WheresDocLogo size={42} withText />
         </a>
 
         {/* Desktop Nav Links */}
